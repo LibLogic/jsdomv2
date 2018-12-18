@@ -1,9 +1,7 @@
-const banner = document.querySelector('#page-banner');
+const bookList = document.querySelector('#book-list');
 
+console.log('The parent node is:', bookList.parentNode);
+console.log('The parent element is:', bookList.parentElement.parentElement);
 
-console.log('#page-banner node type is:', banner.nodeType);
-console.log('#page-banner node name is:', banner.nodeName);
-console.log('#page-banner has child nodes:', banner.hasChildNodes());
-
-var clonedBanner = banner.cloneNode(true);
-console.log(clonedBanner);
+console.log(bookList.childNodes); //includes all nodes, spaces too
+console.log(bookList.children); //includes just the elements
