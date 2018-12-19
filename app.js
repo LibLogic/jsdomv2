@@ -1,9 +1,14 @@
-const bookList = document.querySelector('#book-list');
+var btns = document.querySelectorAll('#book-list .delete');
 
-console.log('The previous sibling is:', bookList.previousSibling);
-console.log('The previous element sibling is:', bookList.previousElementSibling);
+btns.forEach(function(btn){
+    btn.addEventListener('click', function(e){
+        const li = e.target.parentElement;
+        li.parentElement.removeChild(li);
+    });
+});
 
-console.log('The next sibling is:', bookList.nextSibling);
-console.log('The next element sibling is:', bookList.nextElementSibling);
-
-bookList.previousElementSibling.querySelector('p').innerHTML += '<br />Too cool for everyone else!';
+var link = document.querySelector('#page-banner a');
+link.addEventListener('click', function(e){
+    e.preventDefault();
+    e.target.classList.add('hide');
+})
