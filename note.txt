@@ -1,2 +1,4 @@
 I worked on chapter 12 without watching the video and accidently added the styles to the delete span in the last commit.
-So, there really is nothing to commit for version13.0
+So, there really is nothing to commit for version13.0.
+
+In version14.0 there was nothing to commit.
