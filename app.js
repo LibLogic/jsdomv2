@@ -1,6 +1,7 @@
 var link = document.querySelector('#page-banner a');
 link.addEventListener('click', function(e){
     e.preventDefault();
+    alert('Default action was prevented!');
     e.target.classList.add('hide');
 });
 
@@ -27,5 +28,14 @@ addBook.addEventListener('submit', function(e){
     li.appendChild(book);
     li.appendChild(deleteBtn);
     list.appendChild(li);
+});
+
+const hideBox = document.querySelector('#hide');
+hideBox.addEventListener('change', function(e){
+    if ( hideBox.checked === true ){
+        list.style.display = "none";
+    } else {
+        list.style.display = "initial";
+    }
 });
 
