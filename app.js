@@ -11,3 +11,10 @@ list.addEventListener('click', function(e){
         list.removeChild(li);
     }
 });
+
+const addBook = document.forms['add-book'];
+addBook.addEventListener('submit', function(e){
+    e.preventDefault();
+    const value = addBook.querySelector('input[type="text"]').value;
+});
+
