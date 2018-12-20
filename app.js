@@ -16,5 +16,16 @@ const addBook = document.forms['add-book'];
 addBook.addEventListener('submit', function(e){
     e.preventDefault();
     const value = addBook.querySelector('input[type="text"]').value;
+    addBook.querySelector('input[type="text"]').value = '';
+    var li = document.createElement('li');
+    const book = document.createElement('span');
+    const deleteBtn = document.createElement('span');
+    deleteBtn.classList.add('delete');
+    book.textContent = value;
+    deleteBtn.textContent = 'delete';
+
+    li.appendChild(book);
+    li.appendChild(deleteBtn);
+    list.appendChild(li);
 });
 
